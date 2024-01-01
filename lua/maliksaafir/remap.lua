@@ -29,3 +29,6 @@ end)
 
 -- simple adding of executable permission
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- easy esc
+vim.keymap.set("i", "jk", "<Esc>")
