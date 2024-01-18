@@ -24,6 +24,12 @@ require('mason-lspconfig').setup({
             local lua_opts = lsp_zero.nvim_lua_ls()
             require('lspconfig').lua_ls.setup(lua_opts)
         end,
+        clangd = function()
+            require('lspconfig').clangd.setup({
+                -- potential to use any gcc
+                cmd = { "clangd", "--query-driver=/usr/bin/*gcc" }
+            })
+        end
     }
 })
 
